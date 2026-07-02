@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rıza ❤️ Berra Aden</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Orbitron', sans-serif;
+}
+
+body{
+background:black;
+color:#ff4fd8;
+overflow-x:hidden;
+min-height:100vh;
+}
+
+/* ⭐ STAR BACKGROUND */
+.stars{
+position:fixed;
+width:100%;
+height:200%;
+top:0;
+left:0;
+background: radial-gradient(2px 2px at 20% 30%, white, transparent),
+radial-gradient(1px 1px at 40% 70%, white, transparent),
+radial-gradient(2px 2px at 60% 20%, white, transparent),
+radial-gradient(1px 1px at 80% 50%, white, transparent),
+radial-gradient(1px 1px at 10% 80%, white, transparent),
+radial-gradient(2px 2px at 90% 10%, white, transparent),
+radial-gradient(1px 1px at 50% 90%, white, transparent),
+radial-gradient(2px 2px at 30% 50%, white, transparent);
+background-size:100% 100%;
+animation: moveStars 80s linear infinite;
+z-index:-1;
+pointer-events:none;
+}
+
+@keyframes moveStars{
+0%{transform:translateY(0);}
+100%{transform:translateY(-50%);}
+}
+
+/* HEADER */
+header{
+text-align:center;
+padding:80px 20px 40px;
+position:relative;
+z-index:1;
+}
+
+h1{
+font-size:48px;
+color:#ff4fd8;
+text-shadow:0 0 10px #ff4fd8, 0 0 40px #ff4fd8, 0 0 80px #ff4fd8;
+animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse{
+0%,100%{opacity:1;}
+50%{opacity:0.7;}
+}
+
+header p{
+color:#fff;
+opacity:0.8;
+margin-top:10px;
+font-size:14px;
+}
+
+/* CARDS */
+.card{
+background:rgba(0,0,0,0.7);
+border:1px solid #ff4fd8;
+box-shadow:0 0 20px #ff4fd8, inset 0 0 20px rgba(255,79,216,0.1);
+width:90%;
+max-width:700px;
+margin:30px auto;
+padding:25px;
+border-radius:20px;
+backdrop-filter: blur(10px);
+position:relative;
+z-index:1;
+transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover{
+transform:scale(1.01);
+box-shadow:0 0 40px #ff4fd8, inset 0 0 40px rgba(255,79,216,0.2);
+}
+
+h2{
+color:#ff4fd8;
+margin-bottom:15px;
+text-shadow:0 0 10px #ff4fd8;
+font-size:22px;
+}
+
+/* COUNTDOWN */
+#countdown{
+font-size:26px;
+color:white;
+text-shadow:0 0 10px #ff4fd8;
+font-weight:600;
+letter-spacing:2px;
+}
+
+/* BUTTON */
+button{
+background:transparent;
+border:2px solid #ff4fd8;
+color:#ff4fd8;
+padding:12px 30px;
+border-radius:30px;
+cursor:pointer;
+transition:0.3s;
+box-shadow:0 0 10px #ff4fd8;
+font-size:14px;
+font-weight:600;
+text-transform:uppercase;
+letter-spacing:2px;
+}
+
+button:hover{
+background:#ff4fd8;
+color:black;
+box-shadow:0 0 30px #ff4fd8;
+transform:scale(1.05);
+}
+
+/* LETTER */
+#letter{
+display:none;
+margin-top:20px;
+color:white;
+line-height:1.8;
+animation:fadeIn 1s ease;
+font-size:15px;
+background:rgba(255,79,216,0.05);
+padding:20px;
+border-radius:15px;
+border-left:3px solid #ff4fd8;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(10px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+/* HEARTS */
+.heart{
+position:fixed;
+top:-20px;
+color:#ff4fd8;
+animation:fall linear forwards;
+z-index:999;
+pointer-events:none;
+text-shadow:0 0 10px #ff4fd8;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(0) rotate(0deg) scale(1);
+opacity:1;
+}
+100%{
+transform:translateY(110vh) rotate(720deg) scale(0);
+opacity:0;
+}
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+margin:60px 0 40px;
+color:#ff4fd8;
+text-shadow:0 0 10px #ff4fd8;
+position:relative;
+z-index:1;
+font-size:18px;
+letter-spacing:3px;
+}
+
+/* RESPONSIVE */
+@media (max-width:600px){
+h1{
+font-size:32px;
+}
+.card{
+padding:18px;
+margin:20px auto;
+}
+#countdown{
+font-size:20px;
+}
+button{
+padding:10px 20px;
+font-size:12px;
+}
+}
+
+/* SCROLL BAR */
+::-webkit-scrollbar{
+width:8px;
+}
+::-webkit-scrollbar-track{
+background:#111;
+}
+::-webkit-scrollbar-thumb{
+background:#ff4fd8;
+border-radius:10px;
+}
+::-webkit-scrollbar-thumb:hover{
+background:#ff69d4;
+}
+</style>
+</head>
+
+<body>
+
+<!-- STARS -->
+<div class="stars"></div>
+
+<!-- HEADER -->
+<header>
+<h1>Rıza ❤️ Berra Aden</h1>
+<p>✨ 12 Mayıs'tan beri yazılan neon bir hikâye... ✨</p>
+</header>
+
+<!-- COUNTDOWN CARD -->
+<div class="card">
+<h2>⏳ Tanışma Süresi</h2>
+<div id="countdown">Yükleniyor...</div>
+</div>
+
+<!-- LETTER CARD -->
+<div class="card">
+<h2>💌 Neon Mektup</h2>
+<button onclick="toggleLetter()">📬 Mektubu Aç</button>
+<div id="letter">
+💖 Sevgili Berra Aden,<br><br>
+12 Mayıs'tan beri hayatımın en parlak ışığı sensin.<br>
+Henüz yan yana olamasak da kalbim hep seninle.<br><br>
+Bir gün bu sayfaya birlikte çekildiğimiz ilk fotoğrafı koyacağız.<br><br>
+Seni çok seviyorum.<br><br>
+🌙 — Rıza 💖
+</div>
+</div>
+
+<!-- SONG CARD -->
+<div class="card">
+<h2>🎵 Şarkımız</h2>
+<p style="font-size:18px; color:#fff; text-shadow:0 0 10px #ff4fd8;">🎶 Düşler Sokağı 🎶</p>
+<p style="font-size:12px; opacity:0.6; margin-top:5px;">Her dinlediğimde seni hatırlıyorum...</p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+💖 Sonsuza kadar... 💖
+</footer>
+
+<script>
+// MEKTUP TOGGLE
+function toggleLetter(){
+const l = document.getElementById("letter");
+if(l.style.display === "block"){
+l.style.display = "none";
+} else {
+l.style.display = "block";
+}
+}
+
+// COUNTDOWN
+const startDate = new Date("2026-05-12T00:00:00");
+
+function updateCountdown(){
+const now = new Date();
+const diff = Math.max(0, now - startDate);
+
+const d = Math.floor(diff / 86400000);
+const h = Math.floor((diff % 86400000) / 3600000);
+const m = Math.floor((diff % 3600000) / 60000);
+const s = Math.floor((diff % 60000) / 1000);
+
+document.getElementById("countdown").innerHTML = 
+`${d} Gün ${h} Saat ${m} Dakika ${s} Saniye`;
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// FALLING HEARTS
+setInterval(() => {
+const heart = document.createElement("div");
+heart.className = "heart";
+heart.innerHTML = ["💖","💕","💗","✨","💘"][Math.floor(Math.random() * 5)];
+heart.style.left = Math.random() * 100 + "vw";
+heart.style.fontSize = (15 + Math.random() * 30) + "px";
+heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+document.body.appendChild(heart);
+
+setTimeout(() => {
+heart.remove();
+}, 8000);
+}, 600);
+
+// KONSOL MESAJI
+console.log("💖 Rıza ❤️ Berra Aden 💖");
+console.log("✨ 12 Mayıs 2026 - Sonsuza kadar ✨");
+</script>
+
+</body>
+</html>
